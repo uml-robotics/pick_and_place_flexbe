@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behavior name="PickAndPlacePipeline">
+
+    <executable package_path="pick_and_place_flexbe_behaviors.pickandplace_sm" class="PickAndPlacePipelineSM" />
+    <tagstring></tagstring>
+    <author>Brian Flynn</author>
+    <date>Thu Nov 20 2025</date>
+    <description>
+        Perform a pick and place operation using PCL filtering perception (passthrough,
+        plane segmentation, euclidean clustering), a grasp solving algorithm (such as
+        GPD), and MoveIt Task Constructor (MTC)-based motion planning and execution
+        nodes
+    </description>
+
+
+    <!-- Contained Behaviors -->
+    <contains name="EuclideanClusterExtraction" />
+    <contains name="GPDDetectGrasps" />
+    <contains name="MTCHandlePickAndPlace" />
+
+    <!-- Available Parameters -->
+
+</behavior>
